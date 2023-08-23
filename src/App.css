@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  border: 4px solid red;
+}
+
+.nav__title {
+  font-size: 1.6rem;
+}
+
+.nav__center {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid gray;
+  border-radius: 5rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 1px 1px 4px #888888;
+}
+
+.nav__center-line {
+  border-right: 1px solid gray;
+}
+
+.nav__search {
+  font-size: 2.3rem;
+  background-color: #000;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
