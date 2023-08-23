@@ -1,41 +1,81 @@
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 1rem;
-  border: 4px solid red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.nav__title {
-  font-size: 1.6rem;
+body {
+  background: var(--color-bg);
+  font-family: var(--font-family);
 }
 
-.nav__center {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border: 1px solid gray;
-  border-radius: 5rem;
-  padding: 1rem 1.5rem;
-  box-shadow: 1px 1px 4px #888888;
+.gradient__bg {
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
 }
 
-.nav__center-line {
-  border-right: 1px solid gray;
+.gradient__text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.nav__search {
-  font-size: 2.3rem;
-  background-color: #000;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
+.section {
+  padding: 4rem 6rem;
 }
 
-.nav__right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+.section__margin {
+  margin: 4rem 6rem;
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section {
+    padding: 4rem;
+  }
+
+  .section__margin {
+    margin: 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section {
+    padding: 4rem 2rem;
+  }
+
+  .section__margin {
+    margin: 4rem 2rem;
+  }
 }
